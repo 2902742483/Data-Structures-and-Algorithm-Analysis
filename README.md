@@ -17,11 +17,3 @@ Sesuai dengan instruksi soal tugas, program ini memiliki fitur:
 1. **Tampilkan Data Mahasiswa (Soal 1):** Menginstansiasi 5 objek mahasiswa ke dalam *Array* dan menampilkan detail datanya.
 2. **Update IPK (Soal 2):** Mencari mahasiswa berdasarkan input NIM, lalu memperbarui nilai IPK menggunakan method *Setter*.
 3. **Lihat Predikat Akademik (Soal 3):** Menampilkan status kelulusan (Lulus/Belum Lulus) dan predikat akademik (Dengan Pujian, Sangat Memuaskan, Memuaskan, Perlu Perbaikan) berdasarkan IPK terbaru.
-
-## 🛠️ Cara Menjalankan Program (Untuk Dosen/Reviewer)
-Jika ingin menjalankan program ini secara lokal:
-1. Pastikan Java (JDK) sudah ter-install.
-2. Clone repository ini: `git clone [(https://github.com/2902742483/Data-Structures-and-Algorithm-Analysis)]`
-3. Buka terminal/Command Prompt di dalam folder project.
-4. Compile file java: `javac Main.java Mahasiswa.java`
-5. Jalankan program: `java Main`
