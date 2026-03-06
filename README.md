@@ -21,7 +21,7 @@ Sesuai dengan instruksi soal tugas, program ini memiliki fitur:
 ## 🛠️ Cara Menjalankan Program (Untuk Dosen/Reviewer)
 Jika ingin menjalankan program ini secara lokal:
 1. Pastikan Java (JDK) sudah ter-install.
-2. Clone repository ini: `git clone [link-repo-github-kamu]`
+2. Clone repository ini: `git clone [(https://github.com/2902742483/Data-Structures-and-Algorithm-Analysis)]`
 3. Buka terminal/Command Prompt di dalam folder project.
 4. Compile file java: `javac Main.java Mahasiswa.java`
 5. Jalankan program: `java Main`
