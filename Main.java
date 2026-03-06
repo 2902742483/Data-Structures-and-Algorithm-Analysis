@@ -1,40 +1,35 @@
 import java.util.Scanner;
-import java.util.Locale;
 
 public class Main {
-
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        try (Scanner input = new Scanner(System.in)) {
-
-        // SOAL 1: Membuat 5 objek mahasiswa
+        // SOAL 1 & PANDUAN: Membuat 5 objek mahasiswa ke dalam array
         Mahasiswa[] daftar = {
-                new Mahasiswa("Asep Nugraha", "2440001", "Teknik Informatika", 3.75),
-                new Mahasiswa("Dede Supriatna", "2440002", "Sistem Informasi", 3.40),
-                new Mahasiswa("Cecep Ramdani", "2440003", "Teknik Informatika", 3.90),
-                new Mahasiswa("Ujang Suryana", "2440004", "Teknik Industri", 2.90),
-                new Mahasiswa("Eneng Nurhayati", "2440005", "Akuntansi", 3.20)
+                new Mahasiswa("Andi Pratama", "2440001", "Teknik Informatika", 3.75),
+                new Mahasiswa("Budi Santoso", "2440002", "Sistem Informasi", 3.40),
+                new Mahasiswa("Citra Lestari", "2440003", "Teknik Informatika", 3.90),
+                new Mahasiswa("Joni Suhartono", "2440004", "Teknik Industri", 3.00),
+                new Mahasiswa("Bulan Suci", "2440005", "Akuntansi", 3.20)
         };
 
         int pilihan;
 
+        // Loop untuk menu interaktif
         do {
-
             System.out.println("=== Sistem Data Mahasiswa ===");
-            System.out.println("1. Tampilkan Data Mahasiswa (Soal 1)");
-            System.out.println("2. Update IPK Mahasiswa (Soal 2)");
-            System.out.println("3. Lihat Predikat Akademik (Soal 3)");
-            System.out.println("4. Keluar");
+            System.out.println("1. Tampilkan Data Mahasiswa (Menjawab Soal 1 & 3)");
+            System.out.println("2. Update IPK Mahasiswa (Menjawab Soal 2)");
+            System.out.println("3. Keluar");
             System.out.print("Pilih menu: ");
 
             pilihan = input.nextInt();
-            input.nextLine();
+            input.nextLine(); // Membersihkan karakter newline (enter)
 
             switch (pilihan) {
-
                 case 1:
                     System.out.println("\n=== Data Mahasiswa ===\n");
-
+                    // PANDUAN: Gunakan loop untuk menampilkan seluruh data
                     for (Mahasiswa m : daftar) {
                         m.tampilkanInfo();
                     }
@@ -45,51 +40,35 @@ public class Main {
                     String nimCari = input.nextLine();
 
                     System.out.print("Masukkan IPK baru: ");
-                    double ipkBaru = input.nextDouble();
+                    // Mengambil input IPK sebagai string lalu dikonversi ke double untuk mencegah error Locale
+                    double ipkBaru = Double.parseDouble(input.nextLine());
 
                     boolean ditemukan = false;
-
                     for (Mahasiswa m : daftar) {
-
                         if (m.getNim().equals(nimCari)) {
-
                             m.updateIpk(ipkBaru);
-
                             System.out.println("\nData berhasil diperbarui!\n");
+                            System.out.println("=== Data Mahasiswa ===");
                             m.tampilkanInfo();
-
                             ditemukan = true;
                             break;
                         }
                     }
 
                     if (!ditemukan) {
-                        System.out.println("Mahasiswa tidak ditemukan.");
+                        System.out.println("Mahasiswa dengan NIM tersebut tidak ditemukan.\n");
                     }
-
                     break;
 
                 case 3:
-
-                    System.out.println("\n=== Predikat Akademik Mahasiswa ===\n");
-
-                    for (Mahasiswa m : daftar) {
-                        m.tampilkanInfo();
-                    }
-
-                    break;
-
-                case 4:
                     System.out.println("Program selesai.");
                     break;
 
                 default:
                     System.out.println("Pilihan tidak valid.");
-
             }
+        } while (pilihan != 3);
 
-        } while (pilihan != 4);
-    }
         input.close();
     }
 }
