@@ -6,11 +6,11 @@ public class Main {
 
         // SOAL 1 & PANDUAN: Membuat 5 objek mahasiswa ke dalam array
         Mahasiswa[] daftar = {
-                new Mahasiswa("Andi Pratama", "2440001", "Teknik Informatika", 3.75),
-                new Mahasiswa("Budi Santoso", "2440002", "Sistem Informasi", 3.40),
-                new Mahasiswa("Citra Lestari", "2440003", "Teknik Informatika", 3.90),
-                new Mahasiswa("Joni Suhartono", "2440004", "Teknik Industri", 3.00),
-                new Mahasiswa("Bulan Suci", "2440005", "Akuntansi", 3.20)
+                new Mahasiswa("Asep Nugraha", "2440001", "Teknik Informatika", 3.75),
+                new Mahasiswa("Dede Supriatna", "2440002", "Sistem Informasi", 3.40),
+                new Mahasiswa("Cecep Ramdani", "2440003", "Teknik Informatika", 3.90),
+                new Mahasiswa("Ujang Suryana", "2440004", "Teknik Industri", 3.00),
+                new Mahasiswa("Eneng Nurhayati", "2440005", "Akuntansi", 3.20)
         };
 
         int pilihan;
@@ -72,3 +72,4 @@ public class Main {
         input.close();
     }
 }
+
